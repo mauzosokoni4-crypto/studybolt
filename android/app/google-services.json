@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "97816814746",
+    "project_id": "studybolt-e53e7",
+    "storage_bucket": "studybolt-e53e7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97816814746:android:16687e91aa7bb6b6f1ab23",
+        "android_client_info": {
+          "package_name": "com.example.my_studio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnk50RYRifx0iGjZ98_wmUxvk2h7_uMBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
