@@ -197,14 +197,9 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
   void initState() {
     super.initState();
     unawaited(_openUniversitySelector());
-    @override
-void initState() {
-  super.initState();
-  unawaited(_openUniversitySelector());
-  WidgetsBinding.instance.addPostFrameCallback((_) {
-    checkForUpdate(context);
-  });
-}
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      checkForUpdate(context);
+    });
   }
 
   Future<void> _openUniversitySelector() async {
@@ -899,7 +894,7 @@ class _TutorSearchPageState extends State<TutorSearchPage> {
                   return const Center(
                     child: Text(
                       'No tutors found for this university yet.',
-                      style: TextStyle(color: Colors.white54),
+                      style: TextStyle(color: Color.fromARGB(137, 225, 108, 108)),
                     ),
                   );
                 }

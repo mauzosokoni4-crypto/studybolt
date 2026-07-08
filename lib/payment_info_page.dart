@@ -40,7 +40,8 @@ class PaymentInfoPage extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 8),
-            const Text(
+             const Divider(),
+             const Text(
               'Fanya malipo kupitia M-Pesa au benki, kisha tuma picha ya uthibitisho (screenshot) kwenye WhatsApp yetu ili kufunguliwa akaunti yako.',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white70, height: 1.45),
@@ -60,10 +61,10 @@ class PaymentInfoPage extends StatelessWidget {
               title: 'Benki / Bank',
               icon: Icons.account_balance_rounded,
               rows: [
-                _DetailRow('Benki', AppConfig.bankName),
-                _DetailRow('Jina la akaunti', AppConfig.bankAccountName),
-                _DetailRow('Nambari ya akaunti', AppConfig.bankAccountNumber),
-                _DetailRow('Tawi', AppConfig.bankBranch),
+               _DetailRow('Benki', AppConfig.bankName),
+    _DetailRow('Jina la akaunti', AppConfig.bankAccountName),
+    _DetailRow('Nambari ya akaunti', AppConfig.bankAccountNumber),
+    _DetailRow('Tawi', AppConfig.bankBranch), 
               ],
             ),
             const SizedBox(height: 24),
