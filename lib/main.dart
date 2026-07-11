@@ -456,7 +456,14 @@ class StudyBoltDrawer extends StatelessWidget {
                     backgroundColor: const Color(0xFF121212),
                     title: const Text('About Us', style: TextStyle(color: Colors.white)),
                     content: Text(
-                      'StudyBolt dhumuni lake kuu ni kuhakikisha unampata mwalimu mara tu unapohitaji... Tunatamani kila mwenye uwezo ikawe fursa na kila mwanafunzi apate urahisi zaidi.',
+                      'StudyBolt dhumuni lake kuu ni kuhakikisha unampata mwalimu mara tu unapohitaji... '
+'Tunatamani kila mwenye uwezo ikawe fursa na kila mwanafunzi apate urahisi zaidi '
+'lakini pia kwa mtu yeyote ambaye anahisi ana uwezo wa kufundisha ni fursa kwako, '
+'jisajili kama mwalimu — mwanafunzi mwenye uhitaji na somo lako atakutafuta '
+'katika namba yako ya WhatsApp uliyoiweka. Mwalimu utapaswa kulipia huduma hii '
+'kiasi kidogo huduma yako ya bure ikiisha. Tunapendekeza pia sehemu za kukutana '
+'kusomea ziwe maeneo ya wazi yenye usalama kama vyuo au maeneo maalum kwa '
+'shughuli hizo.',
                       style: TextStyle(color: Colors.grey[300], height: 1.35),
                     ),
                     actions: [
@@ -823,6 +830,55 @@ class _TutorSearchPageState extends State<TutorSearchPage> {
       ),
       body: Column(
         children: [
+          Container(
+  width: double.infinity,
+  margin: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+  padding: const EdgeInsets.all(12),
+  decoration: BoxDecoration(
+    color: const Color(0xFF111111),
+    borderRadius: BorderRadius.circular(12),
+    border: Border.all(color: const Color(0x66FFC107)),
+  ),
+  child: Row(
+    children: [
+      const Icon(Icons.info_outline_rounded, color: Colors.amber, size: 20),
+      const SizedBox(width: 10),
+      Expanded(
+        child: Text(
+          'StudyBolt inakuunganisha na mwalimu haraka. Unahisi una uwezo wa kufundisha? Jisajili kama mwalimu — mwanafunzi atakutafuta WhatsApp yako. read more.....',
+          style: TextStyle(color: Colors.grey[300], fontSize: 12.5, height: 1.3),
+        ),
+      ),
+      const SizedBox(width: 6),
+      IconButton(
+        padding: EdgeInsets.zero,
+        constraints: const BoxConstraints(),
+        icon: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.amber, size: 14),
+        onPressed: () {
+          showDialog<void>(
+            context: context,
+            builder: (c) => AlertDialog(
+              backgroundColor: const Color(0xFF121212),
+              title: const Text('About Us', style: TextStyle(color: Colors.white)),
+              content: SingleChildScrollView(
+                child: Text(
+                  '''StudyBolt dhumuni lake kuu ni kuhakikisha unampata mwalimu mara tu unapohitaji... Tunatamani kila mwenye uwezo ikawe fursa na kila mwanafunzi apate urahisi zaidi
+lakini pia kwa mtu yeyote ambaye anahisi ana uwezo wa kufundisha ni fursa kwako jisajili kama mwalimu — mwanafunzi mwenye uhitaji na somo lako atakutafuta katika namba yako ya WhatsApp uliyoiweka.
+Mwalimu utapaswa kulipia huduma hii kiasi kidogo huduma yako ya bure ikiisha.
+Tunapendekeza pia sehemu za kukutana kusomea ziwe maeneo ya wazi yenye usalama kama vyuo au maeneo maalum kwa shughuli hizo.''',
+                  style: TextStyle(color: Colors.grey[300], height: 1.35),
+                ),
+              ),
+              actions: [
+                TextButton(onPressed: () => Navigator.pop(c), child: const Text('Close')),
+              ],
+            ),
+          );
+        },
+      ),
+    ],
+  ),
+),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
